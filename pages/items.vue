@@ -23,8 +23,9 @@ onMounted(fetchItems);
 <template>
   <div>
     <h1>Items</h1>
-    <div class="item-grid">
+    <div class="">
       <ItemCard
+        class=""
         v-for="item in items"
         :key="item.name"
         :item="item"

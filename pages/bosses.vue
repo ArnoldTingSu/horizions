@@ -26,8 +26,9 @@ onMounted(fetchBosses);
 <template>
   <div>
     <h1>Bosses</h1>
-    <div class="boss-grid">
+    <div class="">
       <BossCard
+        class="m-1"
         v-for="boss in bosses"
         :key="boss.name"
         :boss="boss"

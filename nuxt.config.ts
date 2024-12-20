@@ -1,5 +1,4 @@
 // nuxt.config.ts
-
 import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
@@ -7,8 +6,13 @@ export default defineNuxtConfig({
     plugins: [require('vite-plugin-wasm')()],
   },
 
-  modules: ['@nuxt/ui'],
-  plugins: ['~/plugins/supabase.js'],
+  modules: [
+    '@nuxt/ui',
+    '@nuxtjs/tailwindcss' // Tailwind CSS module
+  ],
+  plugins: ['~/plugins/supabase.js'], // Ensure this path is correct
+
+  css: ['~/assets/css/tailwind.css'], // Link to the global Tailwind CSS file
 
   runtimeConfig: {
     public: {
@@ -17,6 +21,5 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-12-12'
+  compatibilityDate: '2024-12-12',
 });
-  
