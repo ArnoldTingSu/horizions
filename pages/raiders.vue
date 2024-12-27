@@ -9,7 +9,7 @@ const raiders = ref([]);
 const { $supabase } = useNuxtApp();
 
 const fetchRaiders = async () => {
-  const { data, error } = await $supabase.from('raiders').select('*');
+  const { data, error } = await $supabase.from('user_profiles').select('*');
   if (error) {
     console.error('Error fetching raiders:', error);
   } else {
